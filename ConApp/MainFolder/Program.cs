@@ -32,7 +32,7 @@ namespace ConApp
 
 
         //TaskMethods
-        private static void TaskA(int num1, int num2)
+        private static void TaskB(int num1, int num2)
         {
 
             Console.WriteLine("Result = " + (num1 + num2) + "\nGood bay");
@@ -63,7 +63,7 @@ namespace ConApp
         {
             if (nameMethod.Equals("TaskA"))
             {
-                TaskA(Program.num1, Program.num1);
+                TaskB(Program.num1, Program.num1);
             }
             else if (nameMethod.Equals("TaskE"))
             {
