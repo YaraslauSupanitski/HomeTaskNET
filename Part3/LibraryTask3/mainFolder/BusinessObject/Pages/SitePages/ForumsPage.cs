@@ -7,11 +7,11 @@ using LibraryTask3;
 
 namespace ClassLibrary1.mainFolder.Pages.SitePages
 {
-    class ImagesPage : BasePage
+    class ForumsPage : BasePage
     {
-        public ImagesPage() : base(){}
+        public ForumsPage() : base(){}
 
-        public void OpenCategories() { }
+        public void OpenForum() { }
 
         public override void LoadPage()
         {

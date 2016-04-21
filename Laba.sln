@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConAppTask1", "ConApp\ConAppTask1.csproj", "{CB42F25C-D19E-4221-8B9B-8C4D2C14D794}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConAppTask1", "Part1\ConApp1\ConAppTask1.csproj", "{CB42F25C-D19E-4221-8B9B-8C4D2C14D794}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryTask1", "LibraryTask1\LibraryTask1.csproj", "{2CB0DA3A-A95C-438E-B6CC-348747CFB3D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryTask1", "Part1\LibraryTask1\LibraryTask1.csproj", "{2CB0DA3A-A95C-438E-B6CC-348747CFB3D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{01D843F7-6DE0-421D-907C-B45082EDF16A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "Part1\UnitTestProject1\UnitTestProject1.csproj", "{01D843F7-6DE0-421D-907C-B45082EDF16A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConAppTask2", "ConsoleApplication1\ConAppTask2.csproj", "{EEDA15D4-D81A-4631-B6F4-7F69F5A12F75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConAppTask2", "Part2\ConAppTask2\ConAppTask2.csproj", "{EEDA15D4-D81A-4631-B6F4-7F69F5A12F75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConApp2.2", "ConApp2.2\ConApp2.2.csproj", "{C527BCB3-5261-4781-9A24-8C534C48587A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConApp2.2", "Part2\ConApp2.2\ConApp2.2.csproj", "{C527BCB3-5261-4781-9A24-8C534C48587A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConApp3.1", "ConApp3.1\ConApp3.1.csproj", "{D2BA8BEE-1FCB-4A64-8C9B-1DAAB1616B34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConApp3.1", "Part3\ConApp3.1\ConApp3.1.csproj", "{D2BA8BEE-1FCB-4A64-8C9B-1DAAB1616B34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryTask3", "ClassLibrary1\LibraryTask3.csproj", "{D4A11337-8A0B-4C54-AAE4-CEA4530FD829}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryTask3", "Part3\LibraryTask3\LibraryTask3.csproj", "{D4A11337-8A0B-4C54-AAE4-CEA4530FD829}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library3.3Math", "Library3.3Math\Library3.3Math.csproj", "{5C73238E-2B3A-4B8C-B186-280D3E93AC53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library3.3Math", "Part3\Library3.3Math\Library3.3Math.csproj", "{5C73238E-2B3A-4B8C-B186-280D3E93AC53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConApp3.3", "ConApp3.3\ConApp3.3.csproj", "{A862C28A-FCE5-47FE-97C7-4AF9229D23E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConApp3.3", "Part3\ConApp3.3\ConApp3.3.csproj", "{A862C28A-FCE5-47FE-97C7-4AF9229D23E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part1", "Part1", "{56D90B90-892D-4F26-B6E4-95758036F4B0}"
 EndProject
