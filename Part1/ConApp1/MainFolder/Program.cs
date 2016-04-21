@@ -67,7 +67,7 @@ namespace ConApp
             }
             else if (nameMethod.Equals("TaskE"))
             {
-                TaskE(Program.num1, Program.num1);
+                TaskE(Program.num2, Program.num2);
             }
         }
     }

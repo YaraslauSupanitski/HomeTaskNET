@@ -9,10 +9,12 @@ namespace ClassLibrary1.mainFolder.ElementsFolder
 {
     public abstract class BaseElement : ILoggable 
     {
-        public BaseElement()
-        {
+        public string elementName;
 
+        public BaseElement(){
+            //...
         }
+        
 
         public abstract void Click();
         public abstract void SetText(string text);
@@ -23,3 +25,4 @@ namespace ClassLibrary1.mainFolder.ElementsFolder
         }
     }
 }
+

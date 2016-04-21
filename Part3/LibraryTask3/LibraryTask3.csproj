@@ -43,8 +43,8 @@
     <Compile Include="mainFolder\BusinessLogic\Registration.cs" />
     <Compile Include="mainFolder\BusinessObject\Drivers\Driver.cs" />
     <Compile Include="mainFolder\BusinessObject\ElementsFolder\BaseElement.cs" />
+    <Compile Include="mainFolder\BusinessObject\ElementsFolder\PagesElements\SimpleElement.cs" />
     <Compile Include="mainFolder\BusinessObject\ElementsFolder\PagesElements\Form.cs" />
-    <Compile Include="mainFolder\BusinessObject\ElementsFolder\PagesElements\PageName.cs" />
     <Compile Include="mainFolder\BusinessObject\Interfaces\LogInterfaces\ILoggable.cs" />
     <Compile Include="mainFolder\BusinessObject\Interfaces\Readers\IReadConfig.cs" />
     <Compile Include="mainFolder\BusinessObject\Logs\SimpleLog.cs" />

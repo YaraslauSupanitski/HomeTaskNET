@@ -1,4 +1,5 @@
-﻿using ClassLibrary1.mainFolder.Pages.SitePages;
+﻿using ClassLibrary1.mainFolder.BusinessObject.ElementsFolder.PagesElements;
+using ClassLibrary1.mainFolder.Pages.SitePages;
 using LibraryTask3;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,9 @@ namespace ClassLibrary1.mainFolder.BusinessLogic
 
         public void RegistrationPerson(string name, int age)
         {
-            //saveInfo(); 
-            BasePage loginPage = new LoginPage();
-            loginPage.LoadPageBool();
+            saveInfo(name, age);
+            LoginPage loginPage = new LoginPage();
+            loginPage.registration("artem",11);
 
         }
 

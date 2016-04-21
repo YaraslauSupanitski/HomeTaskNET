@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1.mainFolder.BusinessObject.ElementsFolder.PagesElements;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,22 +9,26 @@ namespace ClassLibrary1.mainFolder.ElementsFolder.PagesElements
 {
     class Form : BaseElement
     {
-        private string formName;
+        private string formName = "form";
 
         public Form() : base()
         {
-            FindFormName();
+            this.elementName = "form";
         }
 
-        private void FindFormName()
+
+        public void FillField(string name, string mes)
         {
-            string formName = String.Empty;
-            //...
-            this.formName = formName;
+            SimpleElement field = FindElementByName(name);
+            field.SetText(mes);
         }
 
+        public SimpleElement FindElementByName(string name)
+        {
+            SimpleElement element = new SimpleElement(name);
+            return element;
+        }
 
-        public void FillInfo(string parameters) { }
 
         public override void Click()
         {
