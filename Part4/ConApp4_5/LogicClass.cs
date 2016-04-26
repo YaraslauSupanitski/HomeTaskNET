@@ -14,7 +14,6 @@ namespace ConApp4_5
 
         }
 
-
         public void DoTaskWithRectangles()
         {
             int figureWidth;
@@ -34,8 +33,6 @@ namespace ConApp4_5
             rectanglWidth = ConsoleWorker.getIntegerValue(rectanglWidthMessage);
             rectangLength = ConsoleWorker.getIntegerValue(rectangLengthMessage);
             
-
-
 
             FigureWorker a = new FigureWorker();
             int rectang = a.FindAllRectangle(figureWidth, figureLength, rectanglWidth, rectangLength);

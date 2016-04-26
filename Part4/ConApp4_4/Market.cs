@@ -8,7 +8,7 @@ namespace ConApp4_4
 {
     class Market
     {
-        private static IList<Goods> basket = new List<Goods>(); 
+        private IList<Goods> basket = new List<Goods>(); 
 
         public void AddGood(Goods goods)
         {

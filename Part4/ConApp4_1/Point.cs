@@ -32,13 +32,13 @@ namespace ConApp4_1
 
         public override bool Equals(object obj)
         {
-            if (obj == null || GetType() != obj.GetType())
+            if (obj == null || GetType() != obj.GetType())//!= typeof(Point)
             {
                 return false;
             }
 
             Point p = (Point)obj;
-            return (X == p.X) && (Y == p.Y);
+            return Equals(p);
         }
         
         //Not override. Like in Java.
@@ -56,4 +56,6 @@ namespace ConApp4_1
             return str;
         }
     }
+
+    
 }

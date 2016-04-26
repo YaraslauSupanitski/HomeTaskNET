@@ -24,5 +24,5 @@ namespace ConApp4_5
             return result;
             
         }
-    }
+    }//4x4 vs 1x3
 }
