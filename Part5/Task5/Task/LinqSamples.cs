@@ -202,19 +202,26 @@ namespace SampleQueries
         {
 
             var c = from prod in dataSource.Products
-
                     group prod by prod.Category into categ
-                    from prodInCateg in categ
-                    orderby prodInCateg.UnitsInStock, prodInCateg.UnitPrice
-                    select categ
-
-                    ;
+                    from prodInStockGroup in
+                        (from prod in categ
+                         orderby prod.UnitPrice
+                         group prod by prod.UnitsInStock>0)
+                         group prodInStockGroup by categ.Key;
 
 
             foreach (var categ in c)
             {
-                Console.WriteLine($"{categ.Key}:\t");
-                ObjectDumper.Write(categ);
+                Console.WriteLine($"Category: {categ.Key}");
+                foreach (var innerGroup in categ)
+                {
+                    Console.WriteLine($"\tUnits in stock {innerGroup.Key}:\t");
+                    foreach (var innerProd in innerGroup)
+                    {
+                        ObjectDumper.Write($"\t\tID={innerProd.ProductID}\tPrice={innerProd.UnitPrice}\tStock={innerProd.UnitsInStock}");
+                    }
+                }
+                
             }
          }
         
