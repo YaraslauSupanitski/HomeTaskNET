@@ -13,6 +13,7 @@ namespace ConApp5
         static void Main(string[] args)
         {
             string methodName = String.Empty;
+            
             string filePath = @"C:\Users\Yaraslau_Supanitski@epam.com\Desktop\Presentations\aaa.txt";
 
             int numberForTesting = 1000000;
@@ -31,6 +32,7 @@ namespace ConApp5
             myCollections.Add(new SortedSetMeter());
 
             Worker worker = new Worker();
+
             // chego eto on \n /n ne chitaet???
             Log.LoginInfo(filePath, "");
             Log.LoginInfo(filePath,DateTime.Now.ToString());
