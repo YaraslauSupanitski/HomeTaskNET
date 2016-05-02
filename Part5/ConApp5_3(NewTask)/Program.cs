@@ -16,7 +16,7 @@ namespace ConApp5_3_NewTask_
             //need shange void to list methods
             string path = $"{Environment.CurrentDirectory}\\Data\\Customers.xml";
 
-            LinqWorkerForCastumers linqWorker = new LinqWorkerForCastumers(path);
+            LinqWorkerForCustumers linqWorker = new LinqWorkerForCustumers(path);
 
             //linqWorker.Task6();
             //linqWorker.Task7();

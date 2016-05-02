@@ -19,15 +19,19 @@ namespace LibraryForConsole4
 
             int result = 0;
             bool flag = false;
+            string mes = "Not a number";
 
             while (!flag)
             {
                 Console.Write(message);
                 if (Int32.TryParse(Console.ReadLine(), out result))
                 {
+                    mes = String.Empty;
                     flag = true;
                 }
+                Console.WriteLine(mes);
             }
+
 
             return result;
         }

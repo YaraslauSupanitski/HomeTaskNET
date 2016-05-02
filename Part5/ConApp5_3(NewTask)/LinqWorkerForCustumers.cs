@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace ConApp5_3_NewTask_
 {
-    class LinqWorkerForCastumers
+    class LinqWorkerForCustumers
     {
         private string _path;
 
@@ -16,7 +16,7 @@ namespace ConApp5_3_NewTask_
 
 
 
-        public LinqWorkerForCastumers(string path)
+        public LinqWorkerForCustumers(string path)
         {
             this._path = path;
             this._xmlDoc = XDocument.Load(_path);

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<buttons>
+  <button>
+    <name>button1</name>
+    <status>true</status>
+  </button>
+  <button>
+    <name>button2</name>
+    <status>trqweue</status>
+  </button>
+  <button>
+    <name>button3</name>
+    <status>true</status>
+  </button>
+  <button>
+    <name>button5</name>
+    <status>false</status>
+  </button>
+</buttons>
