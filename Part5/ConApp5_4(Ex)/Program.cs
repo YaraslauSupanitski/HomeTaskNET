@@ -13,14 +13,14 @@ namespace ConApp5_4_Ex_
     {
         static void Main(string[] args)
         {
+
             //message to console
-            string helloMessage = "Hello. Input 1 If ypu want see all button on StartPage."+
-                "Input 2 for click on all button";
+            string helloMessage = "Hello. Input 1 If you want to see all buttons on StartPage."+
+                "Input 2 to click on all buttons";
             bool flagToExit = false;
 
-
-
-            //bage to work
+            
+            //page to work
             StartPage st = new StartPage();
             Console.WriteLine(helloMessage);
 
@@ -43,7 +43,7 @@ namespace ConApp5_4_Ex_
                         }
                         break;
                     default:
-                        Console.WriteLine("These aren't the number you're looking for");
+                        Console.WriteLine("There aren't the number you're looking for");
                         break;
                 }
 

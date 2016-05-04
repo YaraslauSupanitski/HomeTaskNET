@@ -49,6 +49,7 @@ namespace ConApp5_2_2
             //listResult.OrderByDescending(num => num.ToString()[1]);  Почему лист н е сортирует лист, и возращшает старое значение
             return listResult;
         }
+
         /*
         public void DividedByInEnd()
         {
@@ -61,13 +62,13 @@ namespace ConApp5_2_2
 
         public BigInteger DividedBySquareOfNumbers()
         {
-            var aw = dataList.GroupBy(num => num.ToString().ToList().
+            var res = dataList.GroupBy(num => num.ToString().ToList().
                                             Sum(el => (int.Parse(el.ToString())) * (int.Parse(el.ToString()))));
             int max = 0;
             BigInteger result = 0;
 
             //badbadbad
-            foreach (var i in aw)
+            foreach (var i in res)
             {
                 if (i.Key > max)
                 {
@@ -99,6 +100,19 @@ namespace ConApp5_2_2
                                .Count(numCh => numCh == '0'));
             return a;
 
+        }
+
+
+        public List<BigInteger> task6()
+        {
+
+            var listRes = from num in dataList
+                    where  num > 10 && Int32.Parse(num.ToString().Substring(num.ToString().Length - 2)) % 3 == 0
+                    let ind = dataList.IndexOf(num)
+                    where ind < dataList.Count-5 && dataList.GetRange(ind, 5).Any(numInRange => numInRange % BigInteger.Parse(5.ToString()) == 0)
+                    select num;
+
+            return listRes.ToList();        
         }
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryForConsole4;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,14 +19,34 @@ namespace ConApp5_3_NewTask_
 
             LinqWorkerForCustumers linqWorker = new LinqWorkerForCustumers(path);
 
-            //linqWorker.Task6();
-            //linqWorker.Task7();
-            //linqWorker.Task5();
-            //linqWorker.Task4();
-            //linqWorker.Task3(new decimal(2000));
-            //linqWorker.Task2();
-            //linqWorker.Task1();
+            int i = 10;
+            int CountOfTask = 7;
+            while (i != 0)
+            {
+                i = ConsoleWorker.getIntegerValue("We have 7 tasks. Press number 1-7 for show some task. If you whant see all task press 8. 0 - exit\n");
+                if (i == CountOfTask+1)
+                {
+                    for (int y = 1; y < CountOfTask+1; y++)
+                    {
+                        Console.WriteLine($"====================== Task {y} ======================");
+                        ShowResult.Show(y, path);
+                    }
+                }
+                else
+                {
+                    ShowResult.Show(i, path);
+                }
+            }
 
+
+            //ShowResult.Show(1, linqWorker.Task1(20000));
+            //ShowResult.Show(2, linqWorker.Task2());
+
+            //ShowResult.Show(3, linqWorker.Task3(2000));
+            //ShowResult.Show(4, linqWorker.Task4());
+            //ShowResult.Show(5, linqWorker.Task5());
+            //ShowResult.Show(6, linqWorker.Task6());
+            //ShowResult.Show(7, linqWorker.Task7());
 
 
 
