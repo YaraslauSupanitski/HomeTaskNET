@@ -59,5 +59,7 @@ namespace ConApp5_4_Ex_
            Console.WriteLine("Good by");
            Console.ReadLine();
         }
+
+        1
     }
 }

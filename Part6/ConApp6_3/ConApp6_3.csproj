@@ -58,7 +58,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Part4\LibraryForConsole4\LibraryForConsole4.csproj">
+    <ProjectReference Include="..\..\Part4\LibraryForConsole4\LibraryForConsole4.csproj">
       <Project>{08b18910-af4e-42fd-ab98-5d53690a71ee}</Project>
       <Name>LibraryForConsole4</Name>
     </ProjectReference>
