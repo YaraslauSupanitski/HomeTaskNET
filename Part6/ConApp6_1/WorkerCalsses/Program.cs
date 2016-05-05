@@ -13,8 +13,8 @@ namespace ConApp6_1
         {
             DriverFactoryByCommand fc = new DriverFactoryByCommand();
 
-            string a = ConfigurationManager.AppSettings["FireFox"];
-
+            string b = ConfigurationManager.AppSettings["FireFox"];
+            string a = ConfigurationManager.AppSettings["Chrome"];
             fc.getDriver(a);
         }
     }

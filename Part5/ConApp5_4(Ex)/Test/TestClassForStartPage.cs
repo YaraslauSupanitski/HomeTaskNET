@@ -15,6 +15,8 @@ namespace ConApp5_4_Ex_.Test
         [TestMethod]
         public void ClistElementsPos()
         {
+            string a;
+
             Button bt1 = new Button("B1", true);
             Button bt2 = new Button("B2", true);
             Button bt3 = new Button("B3", true);
@@ -30,16 +32,18 @@ namespace ConApp5_4_Ex_.Test
             listButtonForClick.Add(bt3);
 
             StartPage st = new StartPage(listButtonCorrect, listButtonForClick);
-            Assert.AreEqual(true,st.ClickOnAllButtons());
+            Assert.AreEqual(true,st.ClickAllButtons(out a));
         }
 
         [TestMethod]
         public void ClistElementsNeg()
         {
+            string a;
+
             string pathPageData = $"{Environment.CurrentDirectory}\\..\\..\\Test\\DataForTest\\PageData.xml";
             string pathButtonsState = $"{Environment.CurrentDirectory}\\..\\..\\Test\\DataForTest\\ButtonsState.xml";
             StartPage st = new StartPage(pathPageData, pathButtonsState);
-            Assert.AreEqual(false,st.ClickOnAllButtons());
+            Assert.AreEqual(false,st.ClickAllButtons(out a));
         }
 
     }

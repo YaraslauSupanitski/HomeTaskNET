@@ -15,8 +15,7 @@ namespace ConApp5_4_Ex_
         {
 
             //message to console
-            string helloMessage = "Hello. Input 1 If you want to see all buttons on StartPage."+
-                "Input 2 to click on all buttons";
+            string helloMessage = "Hello. Input 1 If you want to see all buttons on StartPage.\nInput 2 to click on all buttons";
             bool flagToExit = false;
 
             
@@ -27,28 +26,30 @@ namespace ConApp5_4_Ex_
             //logic for console
             while (!flagToExit)
             {
-                int res = ConsoleWorker.getIntegerValue("Give me your number ");
-                switch (res)
+                int inputtedNumber = ConsoleWorker.getIntegerValue("Input your number ");
+                switch (inputtedNumber)
                 {
                     case 1:
                         st.ShowAllButtonInConsole();
                         break;
                     case 2:
                         try
-                        {//catch exeption on main...bad idea
-                            st.ClickOnAllButtons();
+                        {
+                            string resOfClick;
+                            st.ClickAllButtons( out resOfClick);
+                            Console.WriteLine(resOfClick);
                         } catch (FormatException ex)
                         {
                             Console.WriteLine(ex.Message);
                         }
                         break;
                     default:
-                        Console.WriteLine("There aren't the number you're looking for");
+                        Console.WriteLine("You must input 1 or 2");
                         break;
                 }
 
                 //can create new method for this choice
-                Console.WriteLine("New choise? (any line(y))/n");
+                Console.WriteLine("Input n, if you whant exit.\nInput other symbol for return to programm ? (any line(y))/n");
                 if (Console.ReadLine().ToUpper().Equals("N"))
                 {
                     flagToExit = true;

@@ -19,7 +19,7 @@ namespace ConApp6_1
             switch (driverName)
             {
                 case "Chrome": dr = ChromeFactory(); break;
-                case "FF": dr =  FireFoxFactory(); break;
+                case "FireFox": dr =  FireFoxFactory(); break;
             }
 
             return dr;

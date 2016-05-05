@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ECB84617-C981-4CB9-8BDC-B6B8D4CCB2DD}</ProjectGuid>
+    <ProjectGuid>{3EA767F9-5BAC-400C-80A3-509CE5ACD4EB}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConApp6_1</RootNamespace>
@@ -50,11 +50,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DriverFactory.cs" />
-    <Compile Include="DriverFactoryByCommand.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="WorkerCalsses\DriverFactory.cs" />
+    <Compile Include="WorkerCalsses\DriverFactoryByCommand.cs" />
+    <Compile Include="WorkerCalsses\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SingletonWebDr.cs" />
+    <Compile Include="WorkerCalsses\SingletonWebDr.cs" />
     <Compile Include="Tests\TestForDriver.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\WebDriver.ChromeDriver.win32.2.21.0.0\content\chromedriver.exe">
+      <Link>chromedriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

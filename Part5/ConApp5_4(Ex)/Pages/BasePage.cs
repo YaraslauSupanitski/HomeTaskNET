@@ -10,7 +10,7 @@ namespace ConApp5_4_Ex_.Pages
 {
     abstract class BasePage
     {
-        protected List<Button> generateButton(string dataPath)
+        protected List<Button> generateButtonOnPage(string dataPath)
         {
             List<Button> buttonList = new List<Button>();
 

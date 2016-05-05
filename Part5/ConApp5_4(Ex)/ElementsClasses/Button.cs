@@ -9,7 +9,7 @@ namespace ConApp5_4_Ex_.Classes
 {
     class Button : BaseElement, IClickable
     {
-        //many many constructor
+        //many many constructors
         public Button(string name, bool status)
         {
             this.Name = name;
