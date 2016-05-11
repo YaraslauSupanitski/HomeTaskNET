@@ -14,6 +14,12 @@ namespace ConApp6_3
         static void Main(string[] args)
         {
 
+            BasePizza BB = new MeatPizza();
+            BaseIngredient mush = new Mushrooms();
+            BaseIngredient pep = new Pepperoni();
+            mush.addIngred(pep.addIngred(mush.addIngred(new MeatPizza())));
+
+
             string pizzaMessage = 
                         "Input 1 Cheese Pizza\n" +
                         "Input 2 Meat Pizza\n" +

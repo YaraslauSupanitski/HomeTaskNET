@@ -60,6 +60,5 @@ namespace ConApp5_4_Ex_
            Console.ReadLine();
         }
 
-        1
     }
 }
