@@ -38,11 +38,11 @@ namespace IntroductionSamples.MyWorkSpace
         public Genre Genre { get; set; }
         [XmlElement("publisher")]
         public string Publisher { get; set; }
-        [XmlElement("publish_date")]
+        [XmlElement("publish_date", DataType = "date")]
         public DateTime Publish_date { get; set; }
         [XmlElement("description")]
         public string Description { get; set; }
-        [XmlElement("registration_date")]
+        [XmlElement("registration_date", DataType = "date")]
         public DateTime Registration_date { get; set; }
 
         public Book()

@@ -14,11 +14,6 @@ namespace ConApp6_3
         static void Main(string[] args)
         {
 
-            BasePizza BB = new MeatPizza();
-            BaseIngredient mush = new Mushrooms();
-            BaseIngredient pep = new Pepperoni();
-            mush.addIngred(pep.addIngred(mush.addIngred(new MeatPizza())));
-
 
             string pizzaMessage = 
                         "Input 1 Cheese Pizza\n" +
@@ -74,10 +69,10 @@ namespace ConApp6_3
                     pizza = ing.addIngred(pizza);
                     goto IngredientsQuestion;
                 case 2:
-                    goto readyPizzaQuestion;
+                    goto ReadyPizzaQuestion;
         }
 
-        readyPizzaQuestion:
+        ReadyPizzaQuestion:
             Console.WriteLine(readyPizzaMessage);
             inputNum = ConsoleWorker.getIntegerValue();
             switch (inputNum)
@@ -86,11 +81,11 @@ namespace ConApp6_3
                     goto PizzaQuestion;
                 case 2:
                     Console.WriteLine("Pizza price: " + pizza.PizzaPrice);
-                    goto readyPizzaQuestion;
+                    goto ReadyPizzaQuestion;
                 case 3:
                     Console.WriteLine("Pizza ingridients: ");
                     pizza.Additives.ForEach(el => Console.WriteLine(el));
-                    goto readyPizzaQuestion;
+                    goto ReadyPizzaQuestion;
                 case 4:
                     break;
             }

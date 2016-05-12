@@ -16,7 +16,7 @@ namespace ConApp7
             //o.Deserialize();
             XMLForBook a = new XMLForBook();
             //a.Deserialize();
-            a.DesToList();
+            //a.DesToList();
             a.Serial();
         }
     }

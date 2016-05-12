@@ -10,7 +10,7 @@ namespace ConApp6_2
     abstract class MathCommandAbstract : ICommand
     {
 
-        public MathCommandAbstract(BaseRecirver baseResirver)
+        public MathCommandAbstract(IBaseRecirver baseResirver)
         {
         }
 

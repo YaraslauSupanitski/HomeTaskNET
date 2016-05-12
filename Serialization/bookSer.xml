@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalog xmlns="http://library.by/catalog">
+  <book id="1">
+    <isbn>1-1-1111-1</isbn>
+    <author>Autor1_1</author>
+    <title>Tiфывtle1</title>
+    <genre>Computer</genre>
+    <publisher>Publisher1</publisher>
+    <publish_date>2001-01-01</publish_date>
+    <description>Des1</description>
+    <registration_date>2001-01-01</registration_date>
+  </book>
+  <book id="2">
+    <isbn>2-2-2222-2</isbn>
+    <author>Autor2</author>
+    <title>Title2</title>
+    <genre>Computer</genre>
+    <publisher>Publisher2</publisher>
+    <publish_date>2002-02-02</publish_date>
+    <description>Des2</description>
+    <registration_date>2002-02-02</registration_date>
+  </book>
+</catalog>

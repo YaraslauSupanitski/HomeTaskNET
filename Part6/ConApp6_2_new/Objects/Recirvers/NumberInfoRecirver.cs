@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConApp6_2.Objects.Recirvers
 {
-    class NumberInfoRecirver : BaseRecirver
+    class NumberInfoRecirver : IBaseRecirver
     {
         public int number { get; set; }
 

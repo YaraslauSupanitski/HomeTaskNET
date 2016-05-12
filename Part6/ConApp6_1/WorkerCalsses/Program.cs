@@ -11,11 +11,8 @@ namespace ConApp6_1
     {
         static void Main(string[] args)
         {
-            DriverFactoryByCommand fc = new DriverFactoryByCommand();
-
-            string b = ConfigurationManager.AppSettings["FireFox"];
-            string a = ConfigurationManager.AppSettings["Chrome"];
-            fc.getDriver(a);
+            var dr = SingletonWebDr.getWebDriver();
+            dr.Close();
         }
     }
 }

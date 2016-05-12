@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConApp6_2.Objects.Recirvers
 {
-    public class PointRecirver : BaseRecirver
+    public class PointRecirver : IBaseRecirver
     {
         public int x1 { get; set; }
         public int y1 { get; set; }

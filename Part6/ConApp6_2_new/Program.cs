@@ -27,23 +27,23 @@ namespace ConApp6_2
                 Console.WriteLine(messForPerson);
                 int numberFlag = ConsoleWorker.getIntegerValue();
                 MathCommandAbstract command = null;
-                BaseRecirver recirver;
+                IBaseRecirver recirver;
                 if (numberFlag == 0) { flagToExit = true; continue; }
                 switch (numberFlag)
                 {
                     case 1:
-                        recirver = new NumberInfoRecirver(ConsoleWorker.getIntegerValue("Input number"));
+                        recirver = new NumberInfoRecirver(ConsoleWorker.getIntegerValue("Input number "));
                         command = new NumberInfo((NumberInfoRecirver)recirver);
                         break;
                     case 2:
-                        recirver = new PointRecirver(ConsoleWorker.getIntegerValue("Input x1"),
-                                                     ConsoleWorker.getIntegerValue("Input y1"),
-                                                     ConsoleWorker.getIntegerValue("Input x2"),
-                                                     ConsoleWorker.getIntegerValue("Input y2"));
+                        recirver = new PointRecirver(ConsoleWorker.getIntegerValue("Input x1 "),
+                                                     ConsoleWorker.getIntegerValue("Input y1 "),
+                                                     ConsoleWorker.getIntegerValue("Input x2 "),
+                                                     ConsoleWorker.getIntegerValue("Input y2 "));
                         command = new PointsWorker((PointRecirver)recirver);
                         break;
                     case 3:
-                        recirver = new CounterNumberInNumeralRecirver(ConsoleWorker.getIntegerValue("Input number"));
+                        recirver = new CounterNumberInNumeralRecirver(ConsoleWorker.getIntegerValue("Input number "));
                         command = new CounterNumberInNumeral((CounterNumberInNumeralRecirver)recirver);
                         break;
                 }

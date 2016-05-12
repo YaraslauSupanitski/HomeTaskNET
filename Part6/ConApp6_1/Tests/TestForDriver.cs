@@ -16,15 +16,7 @@ namespace ConApp6_1.Tests
         [TestMethod]
         public void DriverTest()
         {
-            string BrowNameForTest = "FireFox";
-            string driverName = ConfigurationManager.AppSettings["FireFox"];
 
-            DriverFactoryAbstr fc = new DriverFactoryByCommand();
-            fc.getDriver(driverName);
-
-            ICapabilities capabilities = ((RemoteWebDriver)SingletonWebDr.getWebDriver()).Capabilities;
-            Assert.AreEqual(BrowNameForTest.ToLower(), capabilities.BrowserName);
-            SingletonWebDr.getWebDriver().Quit();
         }
     }
 }

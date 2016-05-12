@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,14 +19,10 @@ namespace ConApp6_1
         public static IWebDriver getWebDriver()
         {
             if (_webDriver == null)
-                SetWebDriver(new FirefoxDriver());
+                _webDriver = DriverFactory.getDriver(ConfigurationManager.AppSettings["browser"]);
             return _webDriver;
         }
 
-        public static void SetWebDriver(IWebDriver wb)
-        {
-            _webDriver = wb;
-        }
     }
 }
 

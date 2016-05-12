@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConApp6_2.Objects.Recirvers
 {
-    interface BaseRecirver
+    interface IBaseRecirver
     {
     }
 }

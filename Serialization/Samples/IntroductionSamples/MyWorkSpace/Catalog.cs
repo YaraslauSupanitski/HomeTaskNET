@@ -12,9 +12,9 @@ namespace IntroductionSamples.MyWorkSpace
     [XmlRoot("catalog", Namespace = "http://library.by/catalog")]
     public class Catalog
     {
-        [XmlElement("book", typeof(Book))]
+        [XmlElement("book")]
         public List<Book> list { get; set; }
-        [XmlAttribute("date")]
+        [XmlAttribute("date", DataType = "date")]
         DateTime Date { get; set; }
 
 

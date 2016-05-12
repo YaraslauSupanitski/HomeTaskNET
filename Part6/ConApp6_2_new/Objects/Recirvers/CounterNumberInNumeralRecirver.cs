@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConApp6_2.Objects.Recirvers
 {
-    class CounterNumberInNumeralRecirver : BaseRecirver
+    class CounterNumberInNumeralRecirver : IBaseRecirver
     {
         public int numeral;
 
