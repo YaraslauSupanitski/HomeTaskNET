@@ -12,7 +12,7 @@ namespace ConApp6_1
     class DriverFactory
     {
 
-        public static IWebDriver getDriver(string driverName)
+        public static IWebDriver GetDriver(string driverName)
         {
             IWebDriver dr=null;
 

@@ -19,7 +19,7 @@ namespace ConApp6_1
         public static IWebDriver getWebDriver()
         {
             if (_webDriver == null)
-                _webDriver = DriverFactory.getDriver(ConfigurationManager.AppSettings["browser"]);
+                _webDriver = DriverFactory.GetDriver(ConfigurationManager.AppSettings["browser"]);
             return _webDriver;
         }
 

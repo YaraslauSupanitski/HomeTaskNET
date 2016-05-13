@@ -25,22 +25,21 @@ namespace IntroductionSamples.MyWorkSpace
             Console.WriteLine(book);
         }
         */
-        public void DesToList()
+        public Catalog DesToList()
         {
-
             var xmlSerializer = new XmlSerializer(typeof(Catalog));
 
             var catalog = xmlSerializer.Deserialize(new FileStream(FileToDeser, FileMode.Open)) as Catalog;
+            return catalog;
 
         }
 
         public void Serial()
         {
-            Book b1 = new Book("1", "1-1-1111-1", "Autor1_1", "Tiфывtle1", Genre.Computer, "Publisher1", "01.01.2001", "Des1", "01.01.2001");
-            Book b2 = new Book("2", "2-2-2222-2", "Autor2", "Title2", Genre.Computer, "Publisher2", "02.02.2002", "Des2", "02.02.2002");
-            Catalog cat = new Catalog();
-            cat.list = new List<Book>() { b1, b2 };
-
+            //Book b1 = new Book("1", "1-1-1111-1", "Autor1_1", "Tiфывtle1", Genre.Computer, "Publisher1", "01.01.2001", "Des1", "01.01.2001");
+            //Book b2 = new Book("2", "2-2-2222-2", "Autor2", "Title2", Genre.Computer, "Publisher2", "02.02.2002", "Des2", "02.02.2002");
+            Catalog cat = DesToList();
+            //cat.list = new List<Book>() { b1, b2 };
             var serializer = new XmlSerializer(typeof(Catalog));
             var fs = new StreamWriter(
                 new FileStream(FileToSer, FileMode.Create), Encoding.UTF8);

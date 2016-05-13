@@ -13,29 +13,30 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public delegate void Clearer();
+
+        private Clearer clearer = null;
+        private List<System.Windows.Controls.CheckBox> CheckBoxs = new List<System.Windows.Controls.CheckBox>();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            CheckBoxs.Add(CBFields);
+            CheckBoxs.Add(CBMethods);
+            CheckBoxs.Add(CBProperty);
         }
 
         private void BSelectFolder_Click(object sender, RoutedEventArgs e)
         {
-            this.LBmethods.Items.Clear();
-            this.LBclasses.Items.Clear();
-            this.LBdll.Items.Clear();
-
-
+            DelegateWorker(LBmethods, LBclasses, LBdll);
             FolderBrowserDialog fbd = new FolderBrowserDialog();
-            
             if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-
-                string folderPath = fbd.SelectedPath;
-                this.TBXFolderName.Text = folderPath;
-
-                var dllFiles = Directory.GetFiles(folderPath, "*.dll");
-
-                foreach (var strDll in dllFiles) {
+                this.TBXFolderName.Text = fbd.SelectedPath;
+                var dllFiles = Directory.GetFiles(fbd.SelectedPath, "*.dll");
+                foreach (var strDll in dllFiles)
+                {
                     this.LBdll.Items.Add(strDll);
                 }
             }
@@ -43,13 +44,10 @@ namespace WpfApplication1
 
         private void LBdll_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            this.LBmethods.Items.Clear();
-            this.LBclasses.Items.Clear();
-
+            DelegateWorker(LBmethods, LBclasses);
             if (this.LBdll.SelectedItem != null)
             {
                 var dllProject = Assembly.LoadFile(this.LBdll.SelectedItem.ToString());
-
                 foreach (var type in dllProject.GetTypes())
                 {
                     this.LBclasses.Items.Add(type);
@@ -59,47 +57,42 @@ namespace WpfApplication1
 
         private void LBclasses_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            this.LBmethods.Items.Clear();
-
-            if (this.LBclasses.SelectedItem != null) {
-
+            DelegateWorker(LBmethods);
+            if (this.LBclasses.SelectedItem != null)
+            {
                 var type = (Type)this.LBclasses.SelectedItem;
-
-                if(this.CBAll.IsChecked == true)
-                {
-                    this.CBMethods.IsChecked = true;
-                    this.CBProperty.IsChecked = true;
-                    this.CBFields.IsChecked = true;
-                }
-
-                if (this.CBMethods.IsChecked == true)
-                {
-
-                    var mthds = type.GetMethods();
-                    foreach (var mthd in mthds)
-                    {
-                        this.LBmethods.Items.Add(mthd.ToString());
-                    }
-                }
-
-                if (this.CBFields.IsChecked == true)
-                {
-                    var props = type.GetProperties();
-                    foreach (var prop in props)
-                    {
-                        this.LBmethods.Items.Add(prop.Name);
-                    }
-                }
-
-                if (this.CBFields.IsChecked == true)
-                {
-                    var fields = type.GetFields();
-                    foreach (var field in fields)
-                    {
-                        this.LBmethods.Items.Add(field.Name);
-                    }
-                }
+                FillLBmethods(type);
             }
+        }
+        
+        private void FillLBmethods(Type type)
+        {
+            if (this.CBAll.IsChecked == true)
+            {
+                this.CBMethods.IsChecked = true;
+                this.CBProperty.IsChecked = true;
+                this.CBFields.IsChecked = true;
+            }
+            List<MemberInfo> listInfo = new List<MemberInfo>();
+            var enableChechBoxs = CheckBoxs.Where(cb => cb.IsChecked == true).Select(cb=>cb).ToList();
+            foreach (var cb in enableChechBoxs)
+            {
+                if (cb == CBFields) { listInfo.AddRange(type.GetFields()); }
+                if (cb == CBMethods) { listInfo.AddRange(type.GetMethods()); }
+                if (cb == CBProperty) { listInfo.AddRange(type.GetProperties()); }
+            }
+            foreach (var item in listInfo)
+            {
+                this.LBmethods.Items.Add(item.Name);
+            }
+            
+        }
+
+        private void DelegateWorker(params  System.Windows.Controls.ListBox[] listBox)
+        {
+            clearer = null;
+            listBox.ToList().ForEach(LB => clearer += LB.Items.Clear);
+            clearer.Invoke();
         }
     }
 }

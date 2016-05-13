@@ -15,7 +15,7 @@ namespace IntroductionSamples.MyWorkSpace
         [XmlElement("book")]
         public List<Book> list { get; set; }
         [XmlAttribute("date", DataType = "date")]
-        DateTime Date { get; set; }
+        public DateTime Date { get; set; }
 
 
         public Catalog()
